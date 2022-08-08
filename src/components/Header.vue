@@ -18,10 +18,6 @@ export default {
                 name: "Add Restaurant",
                 url: "/add-restaurant"
             },
-            {
-                name: "Update Restaurant",
-                url: "/update-restaurant/:id"
-            },
 
         ]
     }

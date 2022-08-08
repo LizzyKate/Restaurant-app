@@ -33,6 +33,7 @@ export default {
       <table>
         <thead>
           <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Address</th>
             <th>Contact</th>
@@ -44,12 +45,16 @@ export default {
         </thead>
         <tbody>
           <tr v-for="(restaurant, restaurantIndex) in restaurant" :key="restaurantIndex">
+            <td>{{ restaurant.id }}</td>
             <td>{{ restaurant.name }}</td>
             <td>{{ restaurant.address }}</td>
             <td>{{ restaurant.phone }}</td>
             <td>{{ restaurant.city }}</td>
             <td>{{ restaurant.state }}</td>
             <td>{{ restaurant.zip }}</td>
+            <td>
+              <router-link :to="'/update-restaurant/' + restaurant.id">Update</router-link>
+            </td>
             <!-- <td>
               <router-link to="/edit/{{ restaurant.id }}">Edit</router-link>
               <router-link to="/delete/{{ restaurant.id }}">Delete</router-link>
